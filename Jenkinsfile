@@ -24,7 +24,7 @@ pipeline {
                 echo 'Deploying....'
                 sh 'npm install'
                 sh 'npm run package'
-                archiveArtifacts artifacts: '**/target/*.zip', fingerprint: true
+                archiveArtifacts artifacts: '**/distribution/*.zip', fingerprint: true
             }
         }
     }
